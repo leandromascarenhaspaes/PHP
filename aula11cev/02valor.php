@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="_css/estilo.css">
 </head>
 <body>
-    <div>
-        <?php
-            $c = 10;
-            while ($c>=0) {
-                echo $c ."<br>";
-                $c-=2;
-            }
+<div>
 
+        <?php
+        $i =1;
+        while ($i<=5) {
+            $v = "num".$i;
+            $url = "v".$i;
+            $$v = isset($_GET[$url])?$_GET[$url]:0;
+            $i++;
+        }
+
+        $i = 1;
+        while ($i<=5) {
+            $v="num".$i;
+            echo "Valor $i : ".$$v . "<br>";
+            $i++;
+        }
         ?>
-        <br><br>
-        <a href="javascript:history.go(-1)" class="botao">Voltar</a>
-    </div>
+</div>
 </body>
 </html>

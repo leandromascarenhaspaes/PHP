@@ -10,26 +10,12 @@
 <body>
     <div>
         <?php
-            $d = isset($_GET["uf"])?$_GET["uf"]:0;
-            switch ($d) {
-                case 1:
-                    echo "Este estado fica na Região Norte.";
-                    break;
-                case 2:
-                    echo "Este estado fica na Região Nordeste.";
-                    break;
-                case 3:
-                    echo "Este estado fica na Região Centro-Oeste.";
-                    break;
-                case 4:
-                    echo "Este estado fica na Região Sudeste.";
-                    break;
-                case 5:
-                    echo "Este estado fica na Região Sul.";
-                    break;
-                default:
-                    echo "Selecione uma região!";
+            $c = 10;
+            while ($c>=0) {
+                echo $c ."<br>";
+                $c-=2;
             }
+
         ?>
         <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>
