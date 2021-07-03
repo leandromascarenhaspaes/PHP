@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="_css/estilo.css">
 </head>
 <body>
-<div>
-
+    <div>
         <?php
-        $i =1;
-        while ($i<=5) {
-            $v = "num".$i;
-            $url = "v".$i;
-            $$v = isset($_GET[$url])?$_GET[$url]:0;
-            $i++;
-        }
-
-        $i = 1;
-        while ($i<=5) {
-            $v="num".$i;
-            echo "Valor $i : ".$$v . "<br>";
-            $i++;
-        }
+            // Contagem progressiva
+            $c = 1;
+            do {
+                echo "$c ";
+                $c++;
+            } while ($c<=10);
         ?>
+        <br><br>
+        <?php
+            // Contagem regressiva
+            $c = 10;
+            do {
+                echo "$c ";
+                $c--;
+            } while ($c>=1);
+        ?>
+        <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>
-</div>
+    </div>
 </body>
 </html>

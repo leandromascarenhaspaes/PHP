@@ -8,25 +8,20 @@
     <link rel="stylesheet" href="_css/estilo.css">
 </head>
 <body>
-<div>
-
+    <div>
         <?php
-        $i =1;
-        while ($i<=5) {
-            $v = "num".$i;
-            $url = "v".$i;
-            $$v = isset($_GET[$url])?$_GET[$url]:0;
-            $i++;
-        }
-
-        $i = 1;
-        while ($i<=5) {
-            $v="num".$i;
-            echo "Valor $i : ".$$v . "<br>";
-            $i++;
-        }
+            $v = isset($_GET["tab"])?$_GET["tab"]:1;
+            echo "<h1> A tabuada do $v é:</h1>";
+            $c = 1;
+            $res = 0;
+            do {
+                $res = $v * $c;
+                echo "$v x $c  = $res<br>";
+                $c++;
+            } while($c<=10);
         ?>
+        <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>
-</div>
+    </div>
 </body>
 </html>

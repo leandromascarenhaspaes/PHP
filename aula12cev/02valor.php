@@ -8,25 +8,20 @@
     <link rel="stylesheet" href="_css/estilo.css">
 </head>
 <body>
-<div>
-
+    <div>
         <?php
-        $i =1;
-        while ($i<=5) {
-            $v = "num".$i;
-            $url = "v".$i;
-            $$v = isset($_GET[$url])?$_GET[$url]:0;
-            $i++;
-        }
-
-        $i = 1;
-        while ($i<=5) {
-            $v="num".$i;
-            echo "Valor $i : ".$$v . "<br>";
-            $i++;
-        }
+            $v = isset($_GET["val"])?$_GET["val"]:1;
+            echo "<h1> Calculando o fatorial de $v</h1>";
+            $c = $v;
+            $fat = 1;
+            do {
+                $fat = $fat * $c;
+                $c--;
+            } while($c>=1);
+            echo "<h2>$v ! = $fat </h2>";
         ?>
+        <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>
-</div>
+    </div>
 </body>
 </html>
