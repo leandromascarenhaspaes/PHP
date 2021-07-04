@@ -11,15 +11,12 @@
     <div>
         <?php
             function soma ($a,$b) {
-                $s = $a + $b;
-                echo "<p>A soma entre $a e $b é igual a $s.</p>";
+                return $a + $b;
             }
-            soma(3,4);
-            soma(8,2);
-            $x = 9;
-            $y = 15;
-            soma($x, $y);
-
+            $x = 3;
+            $y = 4;
+            $r = soma($x, $y);
+            echo "A soma entre $x e $y é igual a $r.";
         ?>
         <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>

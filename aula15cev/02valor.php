@@ -10,13 +10,11 @@
 <body>
     <div>
         <?php
-            function teste (&$x) {
-                $x += 2;
-                echo "<p>O valor de X é $x.</p>";
-            }
-            $a = 3;
-            teste($a);
-            echo "<p>O valor de A é $a.</p>";
+            include "02funcoes.php";
+            echo "<h1>Testando novas funções.</h1>";
+            ola();
+            mostraValor(4);
+            echo "<h2>Finalizando Programa...</h2>";
         ?>
         <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>

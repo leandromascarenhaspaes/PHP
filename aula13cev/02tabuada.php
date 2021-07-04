@@ -5,23 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula PHP</title>
-    <link rel="stylesheet" href="../_css/estilo.css">
+    <link rel="stylesheet" href="_css/estilo.css">
 </head>
 <body>
     <div>
         <?php
-            function soma () {
-                $p = func_get_args();
-                $t = func_num_args();
-                $s = 0;
-                for ($i=0;$i<$t;$i++) {
-                    $s += $p[$i];
-                }
-                return $s;
+            $n = isset($_GET["num"])?$_GET["num"]:1;
+            for ($c=1;$c<=10;$c++) {
+                $r = $n * $c;
+                echo "$n X $c = $r<br>";
             }
-
-            $r = soma(3,5,2,8,9,4);
-            echo "A soma dos valores é $r.";
         ?>
         <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>

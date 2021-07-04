@@ -10,18 +10,16 @@
 <body>
     <div>
         <?php
-            function soma () {
-                $p = func_get_args();
-                $t = func_num_args();
-                $s = 0;
-                for ($i=0;$i<$t;$i++) {
-                    $s += $p[$i];
-                }
-                return $s;
+            function soma ($a,$b) {
+                $s = $a + $b;
+                echo "<p>A soma entre $a e $b é igual a $s.</p>";
             }
+            soma(3,4);
+            soma(8,2);
+            $x = 9;
+            $y = 15;
+            soma($x, $y);
 
-            $r = soma(3,5,2,8,9,4);
-            echo "A soma dos valores é $r.";
         ?>
         <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>

@@ -10,18 +10,13 @@
 <body>
     <div>
         <?php
-            function soma () {
-                $p = func_get_args();
-                $t = func_num_args();
-                $s = 0;
-                for ($i=0;$i<$t;$i++) {
-                    $s += $p[$i];
-                }
-                return $s;
+            function teste (&$x) {
+                $x += 2;
+                echo "<p>O valor de X é $x.</p>";
             }
-
-            $r = soma(3,5,2,8,9,4);
-            echo "A soma dos valores é $r.";
+            $a = 3;
+            teste($a);
+            echo "<p>O valor de A é $a.</p>";
         ?>
         <br><br>
         <a href="javascript:history.go(-1)" class="botao">Voltar</a>
